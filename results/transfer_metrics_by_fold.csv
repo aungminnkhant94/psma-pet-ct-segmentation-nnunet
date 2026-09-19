@@ -1,0 +1,7 @@
+dataset,evaluation,model,cases,mean_dice,median_dice,mean_iou,mean_hd95_mm,median_hd95_mm
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,fold_0,8,0.614687,0.649120,0.454705,38.275595,37.403139
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,fold_1,8,0.647259,0.678981,0.488753,31.607339,27.717947
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,fold_2,8,0.634150,0.614975,0.469959,29.006057,20.567847
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,fold_3,8,0.641135,0.684365,0.485056,30.128889,25.970539
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,fold_4,8,0.641804,0.682535,0.482342,28.814083,18.968018
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,5fold_ensemble,8,0.641940,0.674894,0.483388,32.025044,27.236068

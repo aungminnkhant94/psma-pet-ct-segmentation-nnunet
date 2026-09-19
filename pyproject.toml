@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psma-pet-ct-nnunet"
+version = "1.0.0"
+description = "Reproducible nnU-Net v2 pipeline for PSMA PET/CT tumour segmentation"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "nnunetv2==2.6.4",
+  "numpy==1.26.4",
+  "scipy==1.13.1",
+  "SimpleITK==2.4.0",
+  "pandas==2.2.3",
+  "PyYAML==6.0.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

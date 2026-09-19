@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Medical data, predictions, checkpoints, and private identifiers
+data/
+private/
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+predictions/
+*.nii
+*.nii.gz
+*.pth
+*.npz
+*.pkl
+
+# Runtime output
+logs/
+outputs/
+*.log
+.DS_Store

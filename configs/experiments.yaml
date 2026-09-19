@@ -1,0 +1,66 @@
+project:
+  configuration: 3d_fullres
+  trainer: nnUNetTrainer
+  plans: nnUNetPlans
+  folds: [0, 1, 2, 3, 4]
+  checkpoint: checkpoint_final.pth
+  split_seed: 12345
+
+datasets:
+  public_whole_body:
+    id: 297
+    name: Dataset297_PSMA18F
+    channels: {0: PET, 1: CT}
+    training_cases: 269
+    test_cases: 100
+    spacing_mm: [1.5, 1.5, 1.5]
+  private_whole_body_baseline:
+    id: 298
+    name: Dataset298_PSMA5mm
+    channels: {0: CT, 1: PET}
+    training_cases: 32
+    test_cases: 8
+    spacing_mm: [5.0, 5.0, 5.0]
+  public_lesion_roi:
+    id: 299
+    name: Dataset299_PSMA18F_LESION_FULL
+    channels: {0: PET, 1: CT}
+    roi: {mode: lesion, margin_voxels: 12, minimum_lesion_voxels: 50, minimum_shape_zyx: [96, 96, 96]}
+  public_union_roi:
+    id: 300
+    name: Dataset300_PSMA18F_UNIONROI
+    channels: {0: PET, 1: CT}
+    training_cases: 233
+    test_cases: 100
+    roi: {mode: union, margin_voxels: 24, minimum_shape_zyx: [96, 96, 96]}
+  private_union_roi:
+    id: 312
+    name: Dataset312_PSMA5mm_UNIONROI
+    channels: {0: CT, 1: PET}
+    training_cases: 32
+  private_lesion_roi:
+    id: 313
+    name: Dataset313_PSMA5mm_LESIONROI
+    channels: {0: CT, 1: PET}
+    training_cases: 407
+    test_cases: 106
+    roi: {mode: lesion, margin_voxels: 24, minimum_lesion_voxels: 20, minimum_shape_zyx: [96, 96, 96]}
+  private_transfer:
+    id: 314
+    name: Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT
+    channels: {0: PET, 1: CT}
+    training_cases: 32
+    test_cases: 8
+    pretrained_source: Dataset297_PSMA18F
+  private_residual_encoder:
+    id: 398
+    name: Dataset398_PSMA5mm_RESENC
+    channels: {0: CT, 1: PET}
+    training_cases: 32
+    plans: nnUNetResEncUNetLPlans
+    planner: nnUNetPlannerResEncL
+  private_pet_only:
+    id: 399
+    name: Dataset399_PSMA5mm_PETONLY
+    channels: {0: PET}
+    training_cases: 32

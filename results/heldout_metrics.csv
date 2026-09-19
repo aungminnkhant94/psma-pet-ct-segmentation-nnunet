@@ -1,0 +1,10 @@
+dataset,evaluation,model,cases,mean_dice,median_dice,mean_iou,mean_hd95_mm,median_hd95_mm,source
+Dataset297_PSMA18F,external_test,fold_2,100,0.614216,0.685112,0.475486,73.294458,25.850203,recovered_per_case_csv
+Dataset297_PSMA18F,external_test,5fold_ensemble,100,0.621769,0.696329,0.484797,69.023695,25.426723,recovered_per_case_csv
+Dataset300_PSMA18F_UNIONROI,external_test,fold_0,100,0.651831,0.716241,0.511839,33.211330,15.908921,recovered_per_case_csv
+Dataset298_PSMA5mm,private_heldout_test,fold_0,8,0.621400,0.679402,0.465556,31.929182,23.031892,recovered_summary_json
+Dataset298_PSMA5mm,private_heldout_test,5fold_ensemble,8,0.646500,0.692500,0.489100,41.090000,39.540000,final_report_only
+Dataset313_PSMA5mm_LESIONROI,private_heldout_lesion_test,fold_0,106,0.607047,0.708464,0.492916,24.979602,7.071068,recovered_summary_json
+Dataset314_PSMA5mm_FROM_D297_WHOLEPATIENT,private_heldout_test,5fold_ensemble,8,0.641940,0.674894,0.483388,32.025044,27.236068,recovered_per_case_csv
+Dataset398_PSMA5mm_RESENC,private_heldout_test,fold_0,8,0.571505,0.607322,0.411802,,,recovered_summary_json
+Dataset399_PSMA5mm_PETONLY,private_heldout_test,fold_0,8,0.616086,0.659482,0.455486,,,recovered_summary_json

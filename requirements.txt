@@ -1,0 +1,12 @@
+# PyTorch 2.5.1 and CUDA 12.1 were recovered from experiment debug logs.
+# Install PyTorch from the official CUDA wheel index before this file:
+# pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+# nnU-Net did not print its package version; 2.6.4 is pinned because it was the
+# current release before the first recovered March 2026 run and matches the CLI.
+nnunetv2==2.6.4
+numpy==1.26.4
+scipy==1.13.1
+SimpleITK==2.4.0
+pandas==2.2.3
+PyYAML==6.0.2
+pytest==8.3.5
