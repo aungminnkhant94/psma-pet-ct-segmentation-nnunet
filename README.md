@@ -68,6 +68,20 @@ from being committed.
 See [results/RESULTS.md](results/RESULTS.md) for every recovered fold and the
 audit qualifications. This is research code and is not a medical device.
 
+## Qualitative results
+
+Ground truth (green) vs prediction (magenta) contours and voxel-level agreement
+maps in axial, coronal, and sagittal views, from the private held-out test set.
+
+**Best whole-patient case** (Dice 0.756, IoU 0.607):
+
+![Best case: ground truth vs prediction tumor agreement](docs/images/qualitative_best_case.png)
+
+**Difficult failure case** (Dice 0.343, IoU 0.207) — the model under-segments
+extensive diffuse disease:
+
+![Worst case: ground truth vs prediction tumor agreement](docs/images/qualitative_failure_case.png)
+
 ## Citation
 
 If this code is used in research, cite nnU-Net:
